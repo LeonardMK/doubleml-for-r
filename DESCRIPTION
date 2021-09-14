@@ -25,6 +25,8 @@ Depends:
 Imports: 
     R6 (>= 2.4.1),
     data.table (>= 1.12.8),
+    magrittr,
+    purrr,
     stats,
     checkmate,
     mlr3 (>= 0.5.0),
