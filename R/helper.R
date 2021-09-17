@@ -171,7 +171,13 @@ extract_prediction = function(obj_resampling, learner_class, n_obs,
       }
       
     } else if ("ResampleResult" %in% class(obj_resampling)) {
-      resp_name = "response"
+      
+      if (obj_resampling$learner$id == "regr.nnet") {
+        resp_name = "response.V1"
+      } else {
+        resp_name = "response"
+      }
+      
     }
     
   } else if (learner_class == "LearnerClassif") {
